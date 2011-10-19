@@ -26,7 +26,7 @@ if os.getenv('EDITOR_CLIENT_COMMAND'):
 elif os.getenv('EMACSCLIENT'):
     EDITOR_COMMAND = "%s -c -a '%s' +%%(linenum)s '%%(filename)s'" % (os.getenv('EMACSCLIENT'), os.getenv('EMACS'))
 else:
-    EDITOR_COMMAND = "/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -c -a '' +%(linenum)s '%(filename)s'"
+    EDITOR_COMMAND = "/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -a '' +%(linenum)s '%(filename)s'"
 
 NSLog('EDITOR_COMMAND: %s', EDITOR_COMMAND )
 
